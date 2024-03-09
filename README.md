@@ -1,7 +1,7 @@
 Tic-tac-toe
 ===========
 
-![Resultado final do projeto](assets/image/preview.png)
+![Resultado final do projeto](./src/assets/image/preview.png)
 
 ## Índice
 - [Tic-tac-toe](#tic-tac-toe)
