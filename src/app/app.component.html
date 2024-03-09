@@ -1,0 +1,30 @@
+<h1>Tic-tac-toe</h1>
+<ng-container *ngIf="(game$ | async) as game">
+  <div class="container">
+    <div *ngIf="game.isGameRunning">
+      Player's turn: <span>{{ game.activePlayer }}</span>
+    </div>
+    <div *ngIf="game.winner">
+      Winner: <span>{{ game.winner }}</span>
+    </div>
+    <div *ngIf="game.winner === null && game.isGameOver">
+      There was no winner
+    </div>
+
+    <section>
+      <div class="square-container">
+        <div *ngFor="let square of game.board">
+          <div
+            class="square"
+            (click)="changePlayer(square)"
+            [ngClass]="{ noClick: game.isGameOver }"
+          >
+            <p>{{ square.player }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <button class="btn-reset" (click)="reset()">Reset</button>
+  </div>
+</ng-container>

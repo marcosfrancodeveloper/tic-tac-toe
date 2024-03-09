@@ -1,0 +1,55 @@
+h1 {
+  text-align: center;
+}
+
+.container {
+  text-align: center;
+}
+
+.btn-reset {
+  padding: 10px 22px;
+  background-color: #04aa6d;
+  text-align: center;
+  display: inline-block;
+  color: white;
+  border: none;
+  border-radius: .2rem;
+  cursor: pointer;
+}
+
+section {
+  padding: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.square-container {
+  display: grid;
+  grid-template-columns: repeat(3, 8rem);
+  grid-template-rows: repeat(3, 8rem);
+  gap: .5rem;
+
+  .square {
+    cursor: pointer;
+    text-align: center;
+    height: 100%;
+    background-color: #dae1e7;
+    border-radius: .5rem;
+
+    &:hover {
+      background-color: lighten(#dae1e7, 2%);
+    }
+
+    p {
+      color: #606f7b;
+      display: inline;
+      overflow: hidden;
+      font-size: 7rem;
+    }
+  }
+}
+
+.noClick {
+  pointer-events: none;
+}
